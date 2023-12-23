@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio Website</title>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+		
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			body{
+				font-family: 'Fira Sans', sans-serif;
+				background-color: #E4E4E4;
+			}
+		
+			a{
+				background-color: black;
+				color: white;
+				padding:10px 20px;
+				text-decoration: none;
+				font-family: 'Oswald', sans-serif;
+				margin-top: 30px;
+				float: left;
+			}
+			
+			p{
+				line-height: 1.5;
+			}
+			
+			section{
+				width: 100%;
+				display: block;
+				float: left;
+				position: relative;
+			}
+			
+			.herosection{
+				background-image: url('images/bghero.jpg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				z-index: -2;
+				
+				padding-top: 100px;
+				padding-bottom: 100px;
+			}
+			
+			.container{
+				width: 1170px;
+				display: block;
+				margin: 0px auto;
+				box-sizing: border-box;
+				clear: both;
+			}
+			
+			.col{
+				display: block;
+				float: left;
+				box-sizing: border-box;
+				padding: 10px;
+			}
+			
+			.col25{
+				width: 25%;
+			}
+			
+			.col33{
+				width: 33.33%;
+			}
+			
+			.col50{
+				width: 50%;				
+			}
+			
+			.col40{
+				width: 40%;
+			}
+			
+			.col60{
+				width: 60%;
+			}
+			
+			.bar{
+				width: 120px;
+				background-color: #000000;
+				height: 6px;
+				display: block;
+				float: left;
+				margin-bottom: 10px;				
+			}
+			.head1{
+				clear: both;
+				font-size: 82px;
+				font-weight: 500;
+			}
+			
+			.section1Circle{
+				display: block;
+				width: 300px;
+				height: 300px;
+				border-radius: 180px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				left: -30px;
+				top: 20px;
+				z-index: -1;
+			}
+			
+			.section2Square{
+				display: block;
+				width: 37%;
+				height: 400px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				left: 0px;
+				top: 26%;
+				z-index: -1;
+			}
+			
+			.section3Square{
+				display: block;
+				width: 60%;
+				height: 200px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				left: 0px;
+				top: 32%;
+				z-index: -1;
+			}
+			
+			.section3Circle{
+				display: block;
+				width: 400px;
+				height: 400px;
+				border-radius: 220px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				right: 0px;
+				top: -120px;
+				z-index: -1;
+			}
+			
+			.section4Square{
+				display: block;
+				width: 40%;
+				height: 400px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				right: 0px;
+				top: -20px;
+				z-index: -1;
+			}
+			
+			.section4Circle{
+				display: block;
+				width: 250px;
+				height: 250px;
+				border-radius: 220px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				left: -30px;
+				bottom: -20px;
+			}
+			
+			.section5Square{
+				display: block;
+				width: 100%;
+				height: 200px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				top: 40%;
+				z-index: -1;
+			}
+			
+			.section6Square{
+				display: block;
+				width: 100%;
+				height: 80px;
+				background-color:#F0C40D;
+				
+				position: absolute;
+				top: 50%;
+				z-index: -1;
+			}
+			
+			.aboutsection{
+				padding-top: 60px;
+				padding-bottom: 60px;
+			}
+			
+			.devsection{
+				padding-top: 100px;
+				padding-bottom: 100px;
+			}
+			
+			.smallHeading{
+				letter-spacing: 8px;
+				font-weight: 400;
+			}
+			.bigHeading{
+				font-weight: 500;
+				font-size: 72px;
+				margin-bottom: 32px;
+			}
+			
+			.card{
+				background-color: #ffffff;
+				padding:30px 20px;
+				margin-bottom: 22px;
+				box-shadow: 0px 5px 15px 5px rgba(125,125,125,0.3);
+			}
+			
+			.card h4{
+				font-family: 'Oswald', sans-serif;
+				font-size: 20px;
+				letter-spacing: 2px;
+				margin-bottom: 11px;
+			}
+			
+			.card p{
+				color: #666;
+			}
+			
+			.card img{
+				margin-top: 10px;
+				margin-bottom: 5px;
+			}
+			
+			.largeParagraph{
+				font-size: 26px;
+				margin-top: 20%;
+			}
+			
+			.otherservices{
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			
+			.teams{
+				padding-top: 100px;
+				padding-bottom: 50px;
+			}
+			
+			.team-member{
+				background-color: white;
+				padding-bottom: 30px;
+				padding-top: 30px;
+			}
+			
+			.teams .profile-img{
+				width: 80%;
+				height: 80%;
+				display: block;
+				float: left;
+				box-sizing: box-border;
+				border-radius: 200px;
+				background-color: Grey;
+			}
+			
+			.teams h2{
+				text-align: center;
+				font-size: 70px;
+				font-weight: 500;
+				margin-bottom: 10px;
+			}
+			
+			.teams a.learn{
+				display: block;
+				background-color: transparent;
+				color: black;
+				border: 2px solid #000000;
+				padding: 8px 16px;
+				margin: 60px auto 60px auto;
+				float: none;
+				width: 100px;
+				text-align: center;
+			}
+			
+			.profile-info h4{
+				font-family: 'Oswald', sans-serif;
+				font-size: 26px;
+				letter-spacing:2px;
+				margin-bottom: 10px;
+			}
+			
+			.profile-info p.position{
+				color: red;
+				margin-bottom: 10px;
+			}
+			
+			.profile-info a{
+				background-color: transparent;
+				text-decoration: none;
+				padding: 5px;
+				margin:0px;
+				margin-top: 10px;
+			}
+			
+			.branding{
+				background-image: url('images/bg2.jpg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				z-index: -2;
+				min-height: 800px;
+			}
+			
+			.card-branding{
+				background-color: #272C32;
+				color: white;
+				display: block;
+				float: left;
+				width: 40%;
+				box-sizing: border-box;
+				padding: 30px;
+				position: absolute;
+				bottom: 0;
+			}
+			
+			.card-branding h2{
+				color: #F0C40D;
+				font-size: 80px;
+				font-weight: 400;
+			}
+			
+			.card-branding p{
+				letter-spacing: 2px;
+				font-size: 22px;
+				font-weight: 400;
+			}
+			
+			.card-branding a{
+				background-color:#F0C40D;
+				color: #272C32;
+				display: inline;
+				padding: 8px 16px;
+				border: 0;
+				float: left;
+			}
+			
+			.aboutus center h2{
+				font-size: 70px;
+			}
+			.aboutus center{
+				margin-bottom: 50px;
+			}
+			.aboutus h2{
+				text-align: center;
+				font-size: 48px;
+				margin: 50px auto 30px;
+			}
+			
+			.contactus{
+				background-color: #000;
+				color: #fff;
+				padding-top: 70px;
+			}
+			
+			.contactus div.bar{
+				float: none;
+				background-color: yellow;
+				margin: 20px auto;
+			}
+			
+			.contactus h2{
+				color: yellow;
+				font-size: 82px;
+				font-weight: 400;
+			}
+			
+			.contactus center.info{
+				background-color: #F0C40D;
+				padding:30px 10px;
+				margin: 30px 0px;
+			}
+			
+			.contactus center.info h3{
+				font-size: 52px;
+				font-weight: 400;
+				color: #000;
+			}
+			
+			.contactus center.info p{
+				color: #000;
+			}
+			
+			#map{
+				margin-top: -170px;
+			}
+			
+			#contact-block{
+				position: relative;
+				z-index:9;
+			}
+		
+			#footer ul{
+				list-style-type:none;
+				margin-top:30px;
+				margin-bottom:30px;
+			}
+			#footer li{
+				display:inline;
+				padding:20px 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Section 1 -->
+		<section class="herosection">
+			<div class="section1Circle"></div>			
+			<div class="container">
+				<div class="col col50">
+					<span class="bar" style="z-index:9;"></span>
+					<h2 class="head1" style="z-index:9;">Design <br>Studio</h2>
+					<p style="z-index: 9;">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					<a href="#" style="z-index: 9;">Read More</a>
+				</div>
+				<div class="col col50"></div>
+			</div>
+		</section>
+	
+		<!-- Sectiion 2 -->
+		<section class="aboutsection">
+			<div class="section2Square"></div>	
+			<div class="container">
+				<div class="col col50">
+					<div class="col col50">
+						<div class="card">
+							<img src="images/camera.png" alt="" width="62px">
+							<h4>Sample Heading</h4>
+							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+						<div class="card">
+							<img src="images/cloud.png" alt="" width="62px">
+							<h4>Sample Heading</h4>
+							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+					<div class="col col50" style="margin-top: 60px;">
+						<div class="card">
+							<img src="images/digital.png" alt="" width="62px">
+							<h4>Sample Heading</h4>
+							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+						<div class="card">
+							<img src="images/network.png" alt="" width="62px">
+							<h4>Sample Heading</h4>
+							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col col50">
+					<div style=" margin-top: 35%;">
+						<h4 class="smallHeading">ABOUT</h4>
+						<h2 class="bigHeading">Need Amazing Design?</h2>
+						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<a href="#">Read More</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<!-- Section 3 -->
+		<section class="devsection">
+			<div class="section3Square"></div>
+			<div class="section3Circle"></div>			
+			<div class="container">
+				<div class="col col50">
+					<h4 class="smallHeading" style="margin-top: 60px;">DESIGN</h4>
+					<h2 class="bigHeading">Website Development & Design?</h2>
+					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col col50">
+					<img src="images/profile-image2.jpg" alt="" width="100%">
+				</div>
+			</div>
+		</section>
+		
+		<!-- Section 4 -->
+		<section class="otherservices">			
+			<div class="section4Circle"></div>
+			<div class="section4Square"></div>
+			<div class="container">
+				<div class="col col40">
+					<img src="images/vc2.jpg" alt="" width="100%">
+				</div>
+				<div class="col col60">
+					<p class="largeParagraph">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Section 5 -->
+		<section class="teams">
+			<div class="section5Square"></div>
+			<h2>OUR PERFECT TEAM</h2>
+			<div class="container">
+				<!--
+				<div class="col100">
+					<div class="col50">
+					
+					</div>
+					<div class="col50">
+					
+					</div>
+				</div>
+				-->
+				<div class="col col50 team-member">
+					<div class="col col50">
+						<img src="images/profile1.jpeg" alt="" class="profile-img">
+					</div>
+					<div class="col col50 profile-info">
+						<h4>Jeffrey Brown</h4>
+						<p class="position">Creative Leader</p>
+						<p>
+							<small><i>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</i></small>
+						</p>
+						<a href="#"><img src="images/facebook.png" width="28px"></a>
+						<a href="#"><img src="images/linkedin.png" width="28px"></a>
+						<a href="#"><img src="images/twitter.png" width="28px"></a>
+					</div>
+				</div>
+				<div class="col col50 team-member">
+					<div class="col col50">
+						<img src="images/profile2.jpg" alt="" class="profile-img">
+					</div>
+					<div class="col col50 profile-info">
+						<h4>Jeffrey Brown</h4>
+						<p class="position">Creative Leader</p>
+						<p>
+							<small><i>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</i></small>
+						</p>
+						<a href="#"><img src="images/facebook.png" width="28px"></a>
+						<a href="#"><img src="images/linkedin.png" width="28px"></a>
+						<a href="#"><img src="images/twitter.png" width="28px"></a>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="col col50 team-member">
+					<div class="col col50">
+						<img src="images/profile2.jpg" alt="" class="profile-img">
+					</div>
+					<div class="col col50 profile-info">
+						<h4>Jeffrey Brown</h4>
+						<p class="position">Creative Leader</p>
+						<p>
+							<small><i>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</i></small>
+						</p>
+						<a href="#"><img src="images/facebook.png" width="28px"></a>
+						<a href="#"><img src="images/linkedin.png" width="28px"></a>
+						<a href="#"><img src="images/twitter.png" width="28px"></a>
+					</div>
+				</div>
+				<div class="col col50 team-member">
+					<div class="col col50">
+						<img src="images/profile2.jpg" alt="" class="profile-img">
+					</div>
+					<div class="col col50 profile-info">
+						<h4>Jeffrey Brown</h4>
+						<p class="position">Creative Leader</p>
+						<p>
+							<small><i>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</i></small>
+						</p>
+						<a href="#"><img src="images/facebook.png" width="28px"></a>
+						<a href="#"><img src="images/linkedin.png" width="28px"></a>
+						<a href="#"><img src="images/twitter.png" width="28px"></a>
+					</div>
+				</div>				
+			</div>			
+			<div class="container">
+			<br>
+				<a href="#" class="learn">LEARN MORE</a>
+			</div>
+		</section>
+		
+		<!-- Section 6 -->
+		<section class="branding">
+			<div class="container">
+				<div class="col col50">
+					<div class="card-branding">
+						<h2>Branding</h2>
+						<p>We help brands & businesses to stand out in the ever-changing digital landscape.</p>
+						<a href="#">READ MORE</a>
+					</div>
+				</div>
+				<div class="col col50"></div>
+			</div>
+		</section>
+	
+		<!-- Section 7-->
+		<section class="aboutus">
+			<div class="section6Square"></div>
+			<h2>About us</h2>
+			<div class="container">
+				<div class="col col25">
+					<center>
+						<h2>120</h2>
+						<p>SAMPLE HEADING</p>
+					</center>
+				</div>
+				<div class="col col25">
+					<center>
+						<h2>120</h2>
+						<p>SAMPLE HEADING</p>
+					</center>
+				</div>
+				<div class="col col25">
+					<center>
+						<h2>120</h2>
+						<p>SAMPLE HEADING</p>
+					</center>
+				</div>
+				<div class="col col25">
+					<center>
+						<h2>120</h2>
+						<p>SAMPLE HEADING</p>
+					</center>
+				</div>
+			</div>
+		</section>
+	
+		<!-- Contact Us -->
+		<section class="contactus">
+			<div class="container">
+				<center>
+					<h2>Contact Us</h2>
+					<div class="bar"></div>
+					<p>It was popularised in the 1960s with the release of Letraset sheets<br> containing Lorem Ipsum passages</p>
+				</center>
+			</div>
+			<div class="container" id="contact-block">
+				<div class="col col33">
+					<center class="info">
+						<img src="images/icon-map.png" width="80px">
+						<h3>Address:</h3>
+						<p>
+							123, Avenue Street<br>
+							New York.
+						</p>
+					</center>
+				</div>
+				<div class="col col33">
+					<center class="info">
+						<img src="images/icon-email.png" width="80px">
+						<h3>Email:</h3>
+						<p>
+							email@company.com<br>
+							sale@company.com
+						</p>
+					</center>
+				</div>
+				<div class="col col33">
+					<center class="info">
+						<img src="images/icon-call.png" width="80px">
+						<h3>Call us:</h3>
+						<p>
+							(+91) 98898 98565<br>
+							(+91) 02114 2544778
+						</p>
+					</center>
+				</div>
+			</div>
+			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.0895049087894!2d73.40519871441991!3d18.749538667026066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be8010e72f046e7%3A0xb297152aff62735a!2sLonavala!5e0!3m2!1sen!2sin!4v1643029665496!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<center id="footer">
+				<ul>
+					<li><img src="images/facebook1.png" width="25px"></li>
+					<li><img src="images/twitter1.png" width="25px"></li>
+					<li><img src="images/instagram.png" width="25px"></li>
+					<li><img src="images/linkedin.png" width="25px"></li>
+				</ul>
+			</center>
+			
+		</section>
+
+	</body>
+</html>
